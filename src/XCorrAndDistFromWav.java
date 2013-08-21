@@ -104,7 +104,7 @@ public class XCorrAndDistFromWav {
 		/*
 		 * args[0] - wav1
 		 * args[1] - wav2
-		 * args[2] - SampleNo + suffix
+		 * args[2] - SampleNo
 		 * args[3] - groundtruth
 		 */
 		if(args.length != 4){
@@ -124,7 +124,7 @@ public class XCorrAndDistFromWav {
 			}
 			
 			XCorrAndDistFromWav xCorrAndDistFromWav = new XCorrAndDistFromWav(wave1, wave2);
-			System.out.println(args[2]+"\t"+args[3]+"\t"+xCorrAndDistFromWav.getMaxCorr()+"\t"+xCorrAndDistFromWav.getDist());
+			System.out.println(args[2]+(int)trimSeconds[i]+"\t"+args[3]+"\t"+xCorrAndDistFromWav.getMaxCorr()+"\t"+xCorrAndDistFromWav.getDist());
 			
 		}
 		
