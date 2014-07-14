@@ -105,7 +105,7 @@ public class XCorrAndDistFromWav {
 		 * args[0] - wav1
 		 * args[1] - wav2
 		 */
-		if(args.length != 4){
+		if(args.length != 2){
 			return;
 		}
 		
