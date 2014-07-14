@@ -104,18 +104,16 @@ public class XCorrAndDistFromWav {
 		/*
 		 * args[0] - wav1
 		 * args[1] - wav2
-		 * args[2] - SampleNo
-		 * args[3] - groundtruth
 		 */
 		if(args.length != 4){
 			return;
 		}
 		
-		final float[] trimSeconds = {10, 5, 4, 3, 2, 1};
+		//final float[] trimSeconds = {10, 5, 4, 3, 2, 1};
 		Wave wave1 = new Wave(args[0]);
 		Wave wave2 = new Wave(args[1]);		
 		
-		for(int i = 0; i < 6; i++){
+		/*for(int i = 0; i < 6; i++){
 			if(wave1.length() > trimSeconds[i]){
 				wave1.rightTrim(wave1.length() - trimSeconds[i]);
 			}
@@ -126,10 +124,12 @@ public class XCorrAndDistFromWav {
 			XCorrAndDistFromWav xCorrAndDistFromWav = new XCorrAndDistFromWav(wave1, wave2);
 			System.out.println(args[2]+(int)trimSeconds[i]+"\t"+args[3]+"\t"+xCorrAndDistFromWav.getMaxCorr()+"\t"+xCorrAndDistFromWav.getDist());
 			
-		}
+		}*/
 		
 		//XCorrAndDistFromWav xCorrAndDistFromWav = new XCorrAndDistFromWav(wave1, wave2);
 		//System.out.println(args[2]+"\t"+args[3]+"\t"+xCorrAndDistFromWav.getMaxCorr()+"\t"+xCorrAndDistFromWav.getDist());
+		XCorrAndDistFromWav xCorrAndDistFromWav = new XCorrAndDistFromWav(wave1, wave2);
+		System.out.println(xCorrAndDistFromWav.getMaxCorr()+"\t"+xCorrAndDistFromWav.getDist());
 		System.exit(0);
 		
 	}
